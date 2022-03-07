@@ -1,86 +1,33 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="bg-gray-100 py-36 px-72 h-screen">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Facebook - log in or sign up</title>
+        <link rel="icon" href="https://www.facebook.com/favicon.ico" />
       </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+     <div className="flex justify-between items-center">
+        <div className="max-w-lg">
+          <img className="w-72 -mb-2" src="logo.svg" alt="logo" />
+          <h3 className="px-7 pb-24 text-2xl leading-8">Facebook helps you connect and share with the people in your life.</h3>
         </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
+        <div>
+          <form action="/" method="post" className="max-w-sm p-4 bg-white shadow-lg rounded-md">
+            <input id="email" className="p-3 mb-3 w-full border border-gray-300 rounded-md focus:shadow-sm outline-blue-400" type="email" placeholder="Email address or phone number" required/>  
+            <input className="p-3 mb-3 w-full border border-gray-300 rounded-md focus:shadow-sm outline-blue-400" type="password" placeholder="Password" required/>  
+            <button type="submit" className="p-2 mb-4 w-full bg-blue-600 text-white text-xl font-bold rounded-md transition-all hover:bg-blue-700">Log In</button>
+            <a href="javascript:void(0)" className="mb-3 text-blue-600 text-sm text-center block hover:underline">Forgotten password?</a>
+            <hr />
+            <button type="button" className="px-4 py-3 mb-3 mt-7 m-auto bg-green-600 text-white text-lg font-semibold rounded-md block transition-all hover:bg-green-700">Create New Account</button>
+          </form>
+          <h3 className="mt-7 text-center text-sm"><span className="font-bold">Create a Page</span> for a celebrity, brand or business.</h3>
+        </div>
+      </div>
     </div>
   )
 }
+
 
 export default Home
